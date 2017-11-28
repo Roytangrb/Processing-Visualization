@@ -17,7 +17,7 @@ void setup(){
   rows = h/ scl;
   //initiatino of the z value, data point
   terrain = new float[cols][rows];
-  tb = loadImage("thumbnail-terrain.png");
+  tb = loadImage("3D-terrain/thumbnail-terrain.png");
 }
 
 void draw(){
@@ -27,7 +27,9 @@ void draw(){
   frameRate(60);
   //if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height){
     if (flyCount % 2 == 0){
-      fly();
+      if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+        fly();
+      }
     } else {
       image(tb, 0, 0);
     }
