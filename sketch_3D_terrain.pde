@@ -10,7 +10,7 @@ float[][] terrain;
 float flying = 0;
 
 void setup(){
-  size(600, 600, P3D);
+  size(500, 500, P3D);
   cols = w /scl;
   rows = h/ scl;
   //initiatino of the z value, data point
