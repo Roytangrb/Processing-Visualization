@@ -27,6 +27,19 @@
             <div class="col-md-2 col-xs-0"></div>
             <div class="col-md-1 col-xs-0"></div>
         </div>
+
+        <div class="row">
+            <div class="col-md-1 col-xs-0"></div>
+            <div class="col-md-2 col-xs-0"></div>
+            <div class="col-md-6 col-xs-12">
+                <canvas id="starfield"></canvas>
+            </div>
+            <div class="col-md-2 col-xs-0"></div>
+            <div class="col-md-1 col-xs-0"></div>
+            <script type="application/processing" data-processing-target="starfield" src="starfield/starfield.pde"></script>
+            <script type="application/processing" data-processing-target="starfield" src="starfield/Star.pde"></script>
+        </div>
+
     </div>
     <!--Method2 inline processing code render on canvas with specified id-->
     <script type="application/processing" data-processing-target="pjs1">
