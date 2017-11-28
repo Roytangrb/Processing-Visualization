@@ -1,20 +1,38 @@
 Star[] stars = new Star[500];
 //speed need to be the global variable
 float speed;
+int flyCount = 0;
+PImage tb;
 
-void setup(){
+void setup() {
   size (500, 500);
-  
-  for (int i = 0 ; i < stars.length; i ++){
+  tb = loadImage("starfield/starfield.png");
+  for (int i = 0; i < stars.length; i ++) {
     stars[i] = new Star();
   }
 }
 
-void draw(){
+void draw() {
+  background(0);
+  if (flyCount % 2 == 0) {
+    if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+      fly();
+    }
+  } else {
+    image(tb, 0, 0);
+  }
+}
+
+void mousePressed() {
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    flyCount ++;
+  }
+}
+
+void fly() {
   speed = map(mouseX, 0, width, 0, 20);
   translate(width/2, height/2);
-  background(0);
-  for (int i = 0 ; i < stars.length; i ++){
+  for (int i = 0; i < stars.length; i ++) {
     stars[i].update();
     stars[i].show();
   }
