@@ -18,13 +18,13 @@ void setup(){
   //initiatino of the z value, data point
   terrain = new float[cols][rows];
   tb = loadImage("3D-terrain/thumbnail-terrain.png");
+  image(tb, 0, 0);
 }
 
 void draw(){
   background(0);
   stroke(255);
   noFill();
-  frameRate(60);
   //if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height){
     if (flyCount % 2 == 0){
       if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
