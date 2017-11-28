@@ -18,27 +18,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-1 col-xs-0"></div>
-            <div class="col-md-2 col-xs-0"></div>
             <div class="col-md-6 col-xs-12">
                 <!--Method1 execute pde-->
                 <canvas data-processing-sources="sketch_3D_terrain.pde"></canvas>
             </div>
-            <div class="col-md-2 col-xs-0"></div>
-            <div class="col-md-1 col-xs-0"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-1 col-xs-0"></div>
-            <div class="col-md-2 col-xs-0"></div>
             <div class="col-md-6 col-xs-12">
                 <canvas id="starfield"></canvas>
+                <script type="application/processing" data-processing-target="starfield" src="starfield/starfield.pde"></script>
             </div>
-            <div class="col-md-2 col-xs-0"></div>
-            <div class="col-md-1 col-xs-0"></div>
-            <script type="application/processing" data-processing-target="starfield" src="starfield/starfield.pde"></script>
         </div>
-
     </div>
     <!--Method2 inline processing code render on canvas with specified id-->
     <script type="application/processing" data-processing-target="pjs1">
