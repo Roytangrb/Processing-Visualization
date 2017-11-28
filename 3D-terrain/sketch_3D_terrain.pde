@@ -17,8 +17,7 @@ void setup(){
   rows = h/ scl;
   //initiatino of the z value, data point
   terrain = new float[cols][rows];
-  //tb = loadImage("3D-terrain/thumbnail-terrain.png");
-  tb = loadImage("starfield/starfield.png");
+  tb = loadImage("3D-terrain/thumbnail-terrain.png");
   image(tb, 0, 0);
 }
 
